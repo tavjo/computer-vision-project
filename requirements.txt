@@ -1,0 +1,13 @@
+pycocotools
+requests
+ipykernel
+matplotlib
+tensorflow 
+pandas 
+numpy 
+pillow
+tensorflow-addons
+tensorflow-datasets
+scikit-image 
+albumentations
+opencv-python-headless
