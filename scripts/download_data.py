@@ -69,4 +69,4 @@ if __name__ == "__main__":
     coco = load_coco_annotations(annotation_file)
 
     # Retrieve and display images
-    get_coco_images(coco, dataset_extract_path, category_names=['person'], max_images=5)
+    get_coco_images(coco, dataset_extract_path, category_names=['person', 'car'], max_images=5)
