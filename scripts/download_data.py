@@ -44,13 +44,16 @@ def get_coco_images(coco, image_folder, category_names=None, max_images=5):
 if __name__ == "__main__":
     # COCO dataset URLs (example URLs, modify as needed)
     dataset_url = "http://images.cocodataset.org/zips/train2017.zip"
+    val_dataset_url = "http://images.cocodataset.org/zips/val2017.zip"
     annotation_url = "http://images.cocodataset.org/annotations/annotations_trainval2017.zip"
     
     # Paths
     base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data', 'raw'))
     dataset_zip_path = os.path.join(base_path, "train2017.zip")
+    val_dataset_zip_path = os.path.join(base_path, "val2017.zip")
     annotation_zip_path = os.path.join(base_path, "annotations_trainval2017.zip")
     dataset_extract_path = os.path.join(base_path, "coco_train2017/train2017")
+    val_dataset_extract_path = os.path.join(base_path, "coco_val2017/val2017")
     annotation_extract_path = os.path.join(base_path, "coco_annotations")
 
     # Create directories if they don't exist
@@ -58,15 +61,18 @@ if __name__ == "__main__":
 
     # Download dataset and annotations
     download_coco_dataset(dataset_url, dataset_zip_path)
+    download_coco_dataset(val_dataset_url, val_dataset_zip_path)
     download_coco_dataset(annotation_url, annotation_zip_path)
 
     # Extract dataset and annotations
     extract_coco_dataset(dataset_zip_path, dataset_extract_path)
+    extract_coco_dataset(val_dataset_zip_path, val_dataset_extract_path)
     extract_coco_dataset(annotation_zip_path, annotation_extract_path)
+
 
     # Load COCO annotations
     annotation_file = os.path.join(annotation_extract_path, 'annotations', 'instances_train2017.json')
     coco = load_coco_annotations(annotation_file)
 
     # Retrieve and display images
-    get_coco_images(coco, dataset_extract_path, category_names=['person', 'car'], max_images=5)
+    get_coco_images(coco, dataset_extract_path, category_names=['person', 'car', 'bicycle'], max_images=5)

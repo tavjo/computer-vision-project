@@ -20,3 +20,7 @@ Thumbs.db
 *.docx
 src/archive/
 data/
+parse_annotations.py
+archive/
+.gitignore
+replace_contrib_slim.py

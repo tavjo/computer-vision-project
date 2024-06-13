@@ -2,8 +2,9 @@ pycocotools
 requests
 ipykernel
 matplotlib
-tensorflow 
+tensorflow
+tensorflow-object-detection-api 
 numpy 
-pillow
+Pillow
 scikit-image 
 opencv-python-headless
