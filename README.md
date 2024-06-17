@@ -75,3 +75,13 @@ In Google Colab, to make it easier to run, the custom functions from this module
 - Use trained model to run inference on new images that were not part of either the training or validation sets.
 - Visualize results (with bounding boxes, labels, and count of how many of each object are in each image).
 
+## Resources
+
+- https://towardsdatascience.com/map-mean-average-precision-might-confuse-you-5956f1bfa9e2
+- http://cocodataset.org/
+- https://github.com/cocodataset/cocoapi/tree/master
+- https://github.com/ultralytics/yolov5
+- https://docs.ultralytics.com/yolov5/tutorials/train_custom_data/#clearml-logging-and-automation-new
+- https://github.com/ultralytics/yolov5/blob/master/tutorial.ipynb
+
+
