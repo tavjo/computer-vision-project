@@ -23,31 +23,55 @@ Develop a Python-based application that uses computer vision techniques to count
     - For each input image, generate an output image that shows bounding boxes, labels, and counts of each object type.
     - Print a summary report that includes total counts for each object type across all processed images.
 
+
+## Prerequisites
+
+- Create conda environment with dependencies:
+  ```bash
+  conda env create -n ENVNAME --file environment.yml
+  ```
+
 ## Getting Started
 
-### Prerequisites
-- Python 3.12.3
-- Install dependencies:
-  ```bash
-  pip install -r requirements.txt
+- The main workflow for this project can be accomplished in one Google Colab notebook: **SNAI_challenge_YOLO_colab_TVJ.ipynb** 
+
+- It consists of the main sections below:
 
 ### Data Preparation
 
 1. Download Data:
-- Run the following script to download the dataset:
-
+- Custom functions to download the COCO dataset:
+ 
+*If local and working from Google Colab notebook:*
   ```bash
-  python /scripts/download_data.py
+  python /src/download_data.py
+  ```
 
 2. Preprocess Data:
-Use the provided scripts in src/data_preprocessing.py to preprocess the images.
+
+*If local:*
+- Use the provided functions in **src/data_preprocessing.py** to preprocess the images and organize data directory for downstream tasks.
+
+In Google Colab, to make it easier to run, the custom functions from this module are provided in the notebook itself. 
 
 ### Training the Model
 
 1. Train
-- Run the following script to train the model:
 
-  ```bash
-  python src/train.py
+- Using YOLOv5 for the object detection task
+- Clone their github repository (https://github.com/ultralytics/yolov5)
+- Install necessary requirements (might not be needed if working in Google Colab)
+- create data configuration file for training
+- adjust the model of choice for the correct number of classes (3 in this case)
+- Run train.py script in yolov5 repo base directory, leaving an empty for the weight parameter since we are training a model from scratch as opposed to finetuning a pre-trained model. 
+- visualize metrics to assess model performance
 
-### Prediction
+
+2. Validate the Model
+ - evaluate model performance by running val.py script
+ - visualize results
+
+### Inference
+- Use trained model to run inference on new images that were not part of either the training or validation sets.
+- Visualize results (with bounding boxes, labels, and count of how many of each object are in each image).
+
