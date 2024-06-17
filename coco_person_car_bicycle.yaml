@@ -1,0 +1,12 @@
+# coco_person_car_bicycle.yaml
+# train: /Users/taishajoseph/Documents/Projects/computer-vision-project/data/filtered/images/train2017/
+# val: /Users/taishajoseph/Documents/Projects/computer-vision-project/data/filtered/images/val2017/
+train: /content/data/filtered/images/train2017/
+val: /content/data/filtered/images/val2017/
+test:  # Optional
+
+# number of classes
+nc: 3
+
+# class names
+names: ['person', 'car', 'bicycle']

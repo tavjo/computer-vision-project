@@ -1,0 +1,17 @@
+name: skynav
+Channels:
+ - defaults
+ - bioconda
+ - conda-forge
+dependencies:
+  - python=3.11  # or your required Python version
+  - ipykernel
+  - matplotlib
+  - Pillow
+  - scikit-image 
+  - numpy
+  - pandas
+  - requests
+  - pip
+  - pip:
+      - pycocotools  # List any pip packages here
