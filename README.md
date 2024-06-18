@@ -83,5 +83,6 @@ In Google Colab, to make it easier to run, the custom functions from this module
 - https://github.com/ultralytics/yolov5
 - https://docs.ultralytics.com/yolov5/tutorials/train_custom_data/#clearml-logging-and-automation-new
 - https://github.com/ultralytics/yolov5/blob/master/tutorial.ipynb
+- Jocher, G. (2020). YOLOv5 by Ultralytics (Version 7.0) [Computer software]. https://doi.org/10.5281/zenodo.3908559
 
 

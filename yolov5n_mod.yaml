@@ -1,9 +1,9 @@
-# Ultralytics YOLOv5 🚀, AGPL-3.0 license
+# Ultralytics YOLOv5 🚀, AGPL-3.0 license (modified)
 
 # Parameters
 nc: 3 # number of classes
-depth_multiple: 0.5 # model depth multiple
-width_multiple: 0.5 # layer channel multiple
+depth_multiple: 0.5 # model depth multiple (modified)
+width_multiple: 0.5 # layer channel multiple (modified)
 anchors:
   - [10, 13, 16, 30, 33, 23] # P3/8
   - [30, 61, 62, 45, 59, 119] # P4/16
