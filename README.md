@@ -40,19 +40,22 @@ Develop a Python-based application that uses computer vision techniques to count
 ### Data Preparation
 
 1. Download Data:
-- Custom functions to download the COCO dataset:
+
+- Download the COCO train and validation datasets:
  
-*If local and working from Google Colab notebook:*
+*If running locally:*
+
   ```bash
   python /src/download_data.py
   ```
 
 2. Preprocess Data:
 
-*If local:*
-- Use the provided functions in **src/data_preprocessing.py** to preprocess the images and organize data directory for downstream tasks.
+*If running locally (not recommended):*
 
-In Google Colab, to make it easier to run, the custom functions from this module are provided in the notebook itself. 
+  - Use the provided functions in **src/data_preprocessing.py** to preprocess the images and organize data directory for downstream tasks.
+
+In Google Colab, to make it easier to run, the custom functions from the "download_data.py" and "data_preprocessing.py" modules are provided in the **SNAI_challenge_YOLO_colab_TVJ.ipynb** notebook. 
 
 ### Training the Model
 
@@ -63,17 +66,18 @@ In Google Colab, to make it easier to run, the custom functions from this module
 - Install necessary requirements (might not be needed if working in Google Colab)
 - create data configuration file for training
 - adjust the model of choice for the correct number of classes (3 in this case)
-- Run train.py script in yolov5 repo base directory, leaving an empty for the weight parameter since we are training a model from scratch as opposed to finetuning a pre-trained model. 
+- Run train.py script in yolov5 repo base directory, leaving an empty string for the weight parameter since we are training a model from scratch as opposed to finetuning a pre-trained model
 - visualize metrics to assess model performance
 
 
 2. Validate the Model
+
  - evaluate model performance by running val.py script
  - visualize results
 
 ### Inference
-- Use trained model to run inference on new images that were not part of either the training or validation sets.
-- Visualize results (with bounding boxes, labels, and count of how many of each object are in each image).
+- Use trained model to run inference on new images that were not part of either the training or validation sets
+- Visualize results (with bounding boxes, labels, and count of how many of each object are in each image)
 
 ## Resources
 
