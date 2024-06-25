@@ -16,7 +16,7 @@ results/
 Thumbs.db
 *.Rhistory
 *.RData
-*.pdf
+# *.pdf
 *.docx
 src/archive/
 data/
